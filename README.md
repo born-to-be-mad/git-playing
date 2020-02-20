@@ -5,6 +5,14 @@
 Documentation `git-merge` - Join two or more development histories together
 ![Git Merge Details](../master/readme_data/git_merge.png)
 
+```
+git merge [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]
+	[--no-verify] [-s <strategy>] [-X <strategy-option>] [-S[<keyid>]]
+	[--[no-]allow-unrelated-histories]
+	[--[no-]rerere-autoupdate] [-m <msg>] [-F <file>] [<commit>…​]
+git merge (--continue | --abort | --quit)
+```
+
 ## Git Rebase
 
 Documentation `git-rebase` - Forward-port local commits to the updated upstream head”
