@@ -28,6 +28,7 @@ git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>]
 	--root [<branch>]
 git rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)
 ```
+<<<<<<< HEAD
 
 ## Hints
 
@@ -61,3 +62,5 @@ git merge --squash feature
 git commit
 git push origin master
 ```
+=======
+>>>>>>> 25c48bf... git-rebase syntax
