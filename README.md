@@ -20,3 +20,22 @@ Documentation `git-rebase` - Forward-port local commits to the updated upstream 
 ![Git Rebase Details](../master/readme_data/git_rebase.png)
 
 ![Git Rebase in Real](../master/readme_data/git_rebase_reality.png)
+
+```
+git rebase [-i | --interactive] [<options>] [--exec <cmd>]
+	[--onto <newbase> | --keep-base] [<upstream> [<branch>]]
+git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>]
+	--root [<branch>]
+git rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)
+```
+
+## Hints
+
+### Merge the master branch into the feature branch:
+
+```
+git checkout feature
+git merge master
+```
+
+This is equal to a one-liner: `git merge feature master`
