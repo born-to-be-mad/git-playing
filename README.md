@@ -2,11 +2,12 @@
 
 ## Git Merge
 
+Documentation `git-merge` - Join two or more development histories together
 ![Git Merge Details](../master/readme_data/git_merge.png)
 
 ## Git Rebase
 
-Documentation - git-rebase: Forward-port local commits to the updated upstream head”
+Documentation `git-rebase` - Forward-port local commits to the updated upstream head”
 
 ![Git Rebase Details](../master/readme_data/git_rebase.png)
 
