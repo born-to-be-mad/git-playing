@@ -28,3 +28,14 @@ git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>]
 	--root [<branch>]
 git rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)
 ```
+
+## Hints
+
+### Merge the master branch into the feature branch:
+
+```
+git checkout feature
+git merge master
+```
+
+This is equal to a one-liner: `git merge feature master`
