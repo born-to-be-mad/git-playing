@@ -39,3 +39,25 @@ git merge master
 ```
 
 This is equal to a one-liner: `git merge feature master`
+
+### Advanced merging the feature branch into the master branch:
+
+```
+git checkout master
+git pull
+git checkout feature
+git pull
+git rebase -i master
+git checkout master
+git merge feature
+```
+
+### One commit in the master branch to keep the commit history as clean as possible:
+
+```
+git checkout master
+git pull origin master
+git merge --squash feature
+git commit
+git push origin master
+```
