@@ -28,10 +28,6 @@ git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>]
 	--root [<branch>]
 git rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9bfae08... add git hints
 
 ## Hints
 
@@ -43,10 +39,6 @@ git merge master
 ```
 
 This is equal to a one-liner: `git merge feature master`
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7bd0c9... iprove git hints
 
 ### Advanced merging the feature branch into the master branch:
 
@@ -69,10 +61,3 @@ git merge --squash feature
 git commit
 git push origin master
 ```
-<<<<<<< HEAD
-=======
->>>>>>> 25c48bf... git-rebase syntax
-=======
->>>>>>> 9bfae08... add git hints
-=======
->>>>>>> a7bd0c9... iprove git hints
