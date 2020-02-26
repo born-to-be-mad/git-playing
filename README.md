@@ -1,5 +1,47 @@
 # Playing with git
 
+## Best practices
+
+- _Commit often_. When we commit often, we keep our commits small and share our work more frequently. That makes it easier to avoid large merge conflicts.
+- _Don’t commit unfinished work_. Break your feature’s code into small but working chunks. Once you finish a chunk, test it, then commit it. This work method prevents the potential conflicts created by merging large bodies of code all at once. At the same time, it ensures we don’t commit small snippets of non-working code.
+- _Before you commit, test_. Don’t commit something until you’ve tested it. Shared code that isn’t tested can create a lot of headaches and lost time for an entire team.
+- _Commit related changes_. Make your commits small, and confine them to directly related changes. When we fix two separate bugs, they should take the form of two different commits.
+- _Write clear commit messages_. Include a single-sentence summary of your changes. After that, explain the motivation for the change, and how it’s different from the previous version.
+- _Use branches_. Branches are an excellent tool to avoid confusion and keep different lines of development separate.
+- _Agree on your workflow_. Your team should agree on a workflow before the project starts. Whether that’s based on topic-branches, git-flow, long-running branches, or some other workflow will depend on the project.
+
+## Git Checkout Remote Branch Definition
+
+_Use case: we need to access a branch that’s not stored locally and we don’t want to create a new local branch or version. => we want to work on the remote version._
+
+`Git checkout remote branch` is a way for a programmer to access the work of a colleague or collaborator for the purpose of review and collaboration. There is no actual command called “git checkout remote branch.” It’s just a way of referring to the action of checking out a remote branch.
+
+- A branch is a separate line of development. New branches are created with the `git branch` command. When a programmer fixes a bug or adds a new feature, he or she creates a new branch to make the changes in a safe way, without threatening existing, working code.
+
+### Possible ways:
+
+- Standart way
+  -> `git fetch origin` - fetch the remote branches
+  -> `git checkout -b branchXXX origin/branchXXX` - checkout the branch you want
+  or do the same by `git branch branchXXX origin/branchXXX`
+  -> `git fetch origin` - fetch the remote branches
+
+- Modern way(with newer versions) if we have no local branch with the same name - simply checking out a remote branch called branchXXX:
+
+```
+ git fetch
+ git checkout branchXXX
+```
+
+- Modern way(with newer versions) if we HAVE local branch with the same name
+
+```
+ git fetch origin
+ git checkout –track origin/branchXXX
+```
+
+- If we’ve got multiple remotes, we need to use: `Git checkout -b xyz /xyz`
+
 ## Git Merge
 
 Documentation `git-merge` - Join two or more development histories together
