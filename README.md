@@ -1,4 +1,4 @@
-# Playing with git
+# PLAYING WITH GIT
 
 ## Best practices
 
