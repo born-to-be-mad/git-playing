@@ -1,5 +1,7 @@
 import React from "react";
 
+import './scss/base.scss';
+
 import "./App.css";
 
 const App = () => (
