@@ -103,3 +103,10 @@ git merge --squash feature
 git commit
 git push origin master
 ```
+
+# GIT errors and solutions
+## The “fatal: refusing to merge unrelated histories"
+![Error:refusing to merge unrelated histories](../master/readme_data/git_error-refusing_to_merge_unrelated_histories.png)
+The “fatal: refusing to merge unrelated histories” Git error occurs when two unrelated projects are merged (i.e., projects that are not aware of each other’s existence and have mismatching commit histories).
+The error is resolved by toggling the allow-unrelated-histories switch. After a git pull or git merge command, add the following tag:
+`git pull origin master --allow-unrelated-histories`
