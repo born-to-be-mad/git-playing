@@ -1,3 +1,8 @@
 node_modules
 .log
 dist
+
+*.class
+target/
+*.iml
+.idea/
