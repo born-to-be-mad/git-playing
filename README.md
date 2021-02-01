@@ -110,3 +110,22 @@ git push origin master
 The “fatal: refusing to merge unrelated histories” Git error occurs when two unrelated projects are merged (i.e., projects that are not aware of each other’s existence and have mismatching commit histories).
 The error is resolved by toggling the allow-unrelated-histories switch. After a git pull or git merge command, add the following tag:
 `git pull origin master --allow-unrelated-histories`
+
+# Working with symlinks
+* Symbolic links(symlinks) are much more than a simple shortcut. 
+* create symlink
+** Windows `mklink symlink TARGET_FILE`(file) or `mklink /D symlink TARGET_DIRECTORY`
+** Linux `ln -s /path/referenced/by/symlink symlink`
+* add symlink to git `git add symlink`  
+* see information about `git ls-files -s symlink`
+```shell
+120000 fa8d8cc8aeedbf66fa6b1a431cc6eba8821aba0b 0       symlink
+```
+In any case, the data referenced by the symlinks is not stored in storage(!). 
+It contains only some meta about symlink, f.e. check `\.git\objects\fa` to see just two small files there.
+* extract from the repository.
+  Depending on the `core.symlink` setting,  
+** if `core.symlinks = false` then symlinks are extracted from the repository as small simple files containing the link text.
+** if `core.symlinks = true` then the correct symlinks are extracted from the repository. In this case it is stored as "BLOB"
+* If the target file/directory referenced by the symlink is deleted, than it will not affect the Git-managed symlink in any way. 
+  It will be just invalid dangling link. It can be removed or changed by linking to something valid if needed. 
